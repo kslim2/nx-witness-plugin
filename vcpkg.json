@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    {
+      "name": "opencv4",
+      "features": [
+        "dnn",
+        "contrib",
+        "ffmpeg",
+        "python"
+      ]
+    },
+    {
+      "name": "cppzmq"
+    },
+    {
+      "name": "faiss"
+    }
+  ]
+}

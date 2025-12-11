@@ -1,0 +1,12 @@
+*.npy filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+models/arc.onnx filter=lfs diff=lfs merge=lfs -text
+models/retina.onnx filter=lfs diff=lfs merge=lfs -text
+models/arc.onnx filter=lfs diff=lfs merge=lfs -text
+models/retina.onnx filter=lfs diff=lfs merge=lfs -text
+vcpkg_installed/vcpkg/pkgs/protobuf_x64-windows/debug/bin/libprotocd.pdb filter=lfs diff=lfs merge=lfs -text
+vcpkg_installed/x64-windows/debug/bin/libprotobufd.pdb filter=lfs diff=lfs merge=lfs -text
+vcpkg_installed/vcpkg/pkgs/protobuf_x64-windows/debug/bin/libprotobufd.pdb filter=lfs diff=lfs merge=lfs -text
+vcpkg_installed/x64-windows/debug/bin/libprotocd.pdb filter=lfs diff=lfs merge=lfs -text
+models/arc.onnx filter=lfs diff=lfs merge=lfs -text
+models/retina.onnx filter=lfs diff=lfs merge=lfs -text
