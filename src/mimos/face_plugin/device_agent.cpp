@@ -60,27 +60,59 @@ DeviceAgent::~DeviceAgent()
  */
 std::string DeviceAgent::manifestString() const
 {
-    // Tell the Server that the plugin can generate the events and objects of certain types.
-    // Id values are strings and should be unique. Format of ids:
-    // `{vendor_id}.{plugin_id}.{event_type_id/object_type_id}`.
-    //
-    // See the plugin manifest for the explanation of vendor_id and plugin_id.
-    return /*suppress newline*/ 1 + R"json(
+    return R"json(
 {
-    "eventTypes": [
+    "id": "mimos.face.recognition",
+    "name": "Mimos Face Recognition",
+    "description": "Face detection and recognition with whitelist/blacklist support",
+    "version": "1.0.0",
+    "vendor": "mimos",
+    "type": "server",
+    "capabilities": ["objectDetection"],
+    "objectTypes": [
         {
-            "id": ")json" + kDetectionEventType + R"json(",
-            "name": "Face detected"
-        },
-        {
-            "id": ")json" + kProlongedDetectionEventType + R"json(",
-            "name": "Face detected (prolonged)",
-            "flags": "stateDependent"
+            "id": "mimos.face",
+            "name": "Face"
         }
     ],
-    "supportedTypes": [
+    "attributes": [
         {
-            "objectTypeId": ")json" + kFaceObjectType + R"json("
+            "name": "Name",
+            "type": "String",
+            "displayName": "Recognized Name"
+        },
+        {
+            "name": "Watchlist",
+            "type": "String",
+            "displayName": "Watchlist",
+            "values": ["whitelist", "blacklist", "unknown"]
+        },
+        {
+            "name": "Similarity",
+            "type": "Number",
+            "unit": "%",
+            "displayName": "Similarity Score"
+        },
+        {
+            "name": "Detection Confidence",
+            "type": "Number",
+            "unit": "%"
+        }
+    ],
+    "eventTypes": [
+        {
+            "id": "mimos.face.detected",
+            "name": "Face Detected"
+        },
+        {
+            "id": "mimos.face.recognized.blacklist",
+            "name": "Blacklisted Person Detected",
+            "captionTemplate": "ALERT: Blacklisted - {attr:Name}"
+        },
+        {
+            "id": "mimos.face.recognized.whitelist",
+            "name": "Whitelisted Person Detected",
+            "captionTemplate": "Whitelisted: {attr:Name}"
         }
     ]
 }
@@ -215,27 +247,39 @@ Ptr<ObjectMetadataPacket> DeviceAgent::detectionsToObjectMetadataPacket(
         return nullptr;
 
     const auto objectMetadataPacket = makePtr<ObjectMetadataPacket>();
+    objectMetadataPacket->setTimestampUs(timestampUs);
 
-    for (const std::shared_ptr<Detection>& detection: detections)
+    for (const std::shared_ptr<Detection>& detection : detections)
     {
         const auto objectMetadata = makePtr<ObjectMetadata>();
 
+        // Basic object info
         objectMetadata->setBoundingBox(detection->boundingBox);
         objectMetadata->setConfidence(detection->confidence);
         objectMetadata->setTrackId(detection->trackId);
+        objectMetadata->setTypeId(kFaceObjectType);  // "mimos.face"
 
-        // Convert class label to object metadata type id.
-        if (detection->classLabel == "face")
-            objectMetadata->setTypeId(kFaceObjectType);
-        // else if (detection->classLabel == "cat")
-        //     objectMetadata->setTypeId(kCatObjectType);
-        // else if (detection->classLabel == "dog")
-        //     objectMetadata->setTypeId(kDogObjectType);
-        // There is no "else", because only the detections with those types are generated.
+        // === RECOGNITION ATTRIBUTES (THIS IS THE KEY PART) ===
+        // Name of recognized person (or "unknown")
+        objectMetadata->addAttribute(makePtr<Attribute>(
+            "Name"s, detection->recognizedName));
+
+        // Watchlist: "whitelist", "blacklist", or "unknown"
+        objectMetadata->addAttribute(makePtr<Attribute>(
+            "Watchlist"s, detection->watchlist));
+
+        // Similarity score (as percentage)
+        objectMetadata->addAttribute(makePtr<Attribute>(
+            "Similarity"s,
+            nx::kit::utils::format("%.1f%%", detection->similarityScore * 100.0f)));
+
+        // Optional: Detection confidence
+        objectMetadata->addAttribute(makePtr<Attribute>(
+            "Detection Confidence"s,
+            nx::kit::utils::format("%.1f%%", detection->confidence * 100.0f)));
 
         objectMetadataPacket->addItem(objectMetadata.get());
     }
-    objectMetadataPacket->setTimestampUs(timestampUs);
 
     return objectMetadataPacket;
 }
@@ -276,8 +320,33 @@ DeviceAgent::MetadataPacketList DeviceAgent::processFrame(
         const auto& eventMetadataPacketList = eventsToEventMetadataPacketList(
             objectTrackerResult.events, frame.timestampUs);
         MetadataPacketList result;
-        if (objectMetadataPacket)
-            result.push_back(objectMetadataPacket);
+        for (const auto& detection : objectTrackerResult.detections)
+        {
+            if (detection->watchlist == "blacklist" && detection->recognizedName != "unknown")
+            {
+                auto eventPacket = makePtr<EventMetadataPacket>();
+                auto event = makePtr<EventMetadata>();
+                event->setTypeId("mimos.face.recognized.blacklist");
+                event->setCaption("Blacklisted person: " + detection->recognizedName);
+                event->setDescription("Similarity: " + std::to_string(detection->similarityScore * 100) + "%");
+                event->setIsActive(true);
+                eventPacket->addItem(event.get());
+                eventPacket->setTimestampUs(frame.timestampUs);
+                result.push_back(eventPacket);
+            }
+            else if (detection->watchlist == "whitelist" && detection->recognizedName != "unknown")
+            {
+                auto eventPacket = makePtr<EventMetadataPacket>();
+                auto event = makePtr<EventMetadata>();
+                event->setTypeId("mimos.face.recognized.whitelist");
+                event->setCaption("Whitelisted person: " + detection->recognizedName);
+                event->setDescription("Similarity: " + std::to_string(detection->similarityScore * 100) + "%");
+                event->setIsActive(true);
+                eventPacket->addItem(event.get());
+                eventPacket->setTimestampUs(frame.timestampUs);
+                result.push_back(eventPacket);
+            }
+        }
         result.insert(
             result.end(),
             std::make_move_iterator(eventMetadataPacketList.begin()),

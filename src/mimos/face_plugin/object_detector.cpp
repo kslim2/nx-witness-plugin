@@ -305,19 +305,17 @@ DetectionList ObjectDetector::processData(const Mat& image)
 
             // Then in Detection creation:
             finalDetections.push_back(
-                std::make_shared<Detection>(
-                    Detection{
-                        /*boundingBox*/ nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normYMin, normYMax - normYMin),
-                        /*confidence*/ confidence,
-                        /*landmarks*/ landmarks,
-                        /*embedding*/ embedding,
-                        /*trackId*/ nx::sdk::Uuid(),  // Tracker will update this
-                        /*classLabel*/ kFaceClassLabel,
-                        /*recognizedName*/ recognizedName,
-                        /*similarityScore*/ bestMatchScore,
-                        /*watchlist*/ recognizedWatchlist
-                    }
-                )
+                std::make_shared<Detection>(Detection{
+                    nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normYMin, normYMax - normYMin),
+                    confidence,
+                    landmarks,
+                    std::move(embedding),
+                    nx::sdk::Uuid(),
+                    kFaceClassLabel,      // explicitly set (same as default)
+                    recognizedName,
+                    bestMatchScore,
+                    recognizedWatchlist
+                })
             );
         }
     }

@@ -60,6 +60,10 @@ add_library(face_plugin SHARED ${FACE_PLUGIN_SOURCES})
 find_package(OpenCV REQUIRED)
 find_package(OpenCV REQUIRED COMPONENTS core dnn tracking)
 
+# add_library(${PROJECT_NAME} SHARED
+#     ${FACE_PLUGIN_SOURCES}
+# )
+
 target_include_directories(face_plugin PRIVATE 
           ${FACE_PLUGIN_SRC_DIR}
           ${OpenCV_INCLUDE_DIRS})

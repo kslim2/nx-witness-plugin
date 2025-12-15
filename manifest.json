@@ -1,0 +1,33 @@
+{
+    "id": "mimos.face.recognition",
+    "name": "Mimos Face Recognition",
+    "description": "Face detection with ArcFace recognition and whitelist/blacklist support",
+    "version": "1.0.0",
+    "vendor": "Mimos",
+    "type": "server",
+    "capabilities": ["objectDetection"],
+    "objectTypes": [
+        {
+            "id": "mimos.face",
+            "name": "Face"
+        }
+    ],
+    "attributes": [
+        {
+            "name": "Name",
+            "type": "String",
+            "displayName": "Recognized Name"
+        },
+        {
+            "name": "Watchlist",
+            "type": "String",
+            "displayName": "Watchlist",
+            "values": ["whitelist", "blacklist", "unknown"]
+        },
+        {
+            "name": "Similarity",
+            "type": "Number",
+            "unit": "%"
+        }
+    ]
+}
