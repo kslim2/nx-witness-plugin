@@ -30,10 +30,8 @@ using cv::dnn::Net;
 struct KnownFace
 {
     std::string name;
-    // "whitelist" or "blacklist"
-    std::string watchlist;
-    // Mat embedding; // 512-D vector
-    std::vector<float> embedding; // storing as vector is safer for persistence
+    std::string watchlist;  // "whitelist" or "blacklist"
+    std::vector<float> embedding;
 };
 
 using DetectionList =std::vector<std::shared_ptr<Detection>>;

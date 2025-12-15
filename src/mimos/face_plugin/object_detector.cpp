@@ -287,37 +287,35 @@ DetectionList ObjectDetector::processData(const Mat& image)
             std::string recognizedWatchlist = "unknown";
             float bestMatchScore = 0.0f;
 
-            for (const auto& knownFace: m_knownFaces)
+            for (const auto& knownFace : m_knownFaces)
             {
-                Mat knownEmbeddingMat(1, kArcFaceEmbeddingSize, CV_32F, (void*) knownFace.embedding.data());
+                Mat knownEmbeddingMat(1, kArcFaceEmbeddingSize, CV_32F, (void*)knownFace.embedding.data());
                 float similarity = cosineSimilarity(embeddingMat, knownEmbeddingMat);
+
                 if (similarity > bestMatchScore)
                 {
                     bestMatchScore = similarity;
                     if (bestMatchScore > kRecognitionThreshold)
                     {
                         recognizedName = knownFace.name;
-                        // "whitelist" or "blacklist"
-                        recognizedWatchlist = knownFace.watchlist; 
+                        recognizedWatchlist = knownFace.watchlist;  // "whitelist" or "blacklist"
                     }
                 }
             }
 
-            // create and store the final detection
+            // Then in Detection creation:
             finalDetections.push_back(
                 std::make_shared<Detection>(
                     Detection{
-                        /*boundingBox*/ nx::sdk::analytics::Rect(
-                            normXMin, normYMin, normXMax - normXMin, normYMax - normYMin
-                        ),
-                        /*confidence*/confidence, // use face detecton confidence
-                        /*landmarks*/landmarks, // dummy/empty landmarks
-                        /*embedding*/embedding,
-                        /*trackId*/nx::sdk::Uuid(), // temporary uuid. will be update by objectTracker
-                        /*classLabel*/kFaceClassLabel, // defined as "face" in detection.h
-                        /*name*/recognizedName, // recognized name metadata
-                        /*similarityScore*/bestMatchScore, // recognition score metadata
-                        /*watchlist*/recognizedWatchlist // watchlist metadata
+                        /*boundingBox*/ nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normYMin, normYMax - normYMin),
+                        /*confidence*/ confidence,
+                        /*landmarks*/ landmarks,
+                        /*embedding*/ embedding,
+                        /*trackId*/ nx::sdk::Uuid(),  // Tracker will update this
+                        /*classLabel*/ kFaceClassLabel,
+                        /*recognizedName*/ recognizedName,
+                        /*similarityScore*/ bestMatchScore,
+                        /*watchlist*/ recognizedWatchlist
                     }
                 )
             );
