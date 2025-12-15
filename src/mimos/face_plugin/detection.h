@@ -27,13 +27,29 @@ extern const std::string kFaceClassLabelCapitalized;
 // /**
 //  * Stores information about detection (one box per frame).
 //  */
-// struct Detection
-// {
-//     const nx::sdk::analytics::Rect boundingBox;
-//     const std::string classLabel;
-//     const float confidence;
-//     const nx::sdk::Uuid trackId;
-// };
+struct Detection
+{
+    // detected face bounding box
+    const nx::sdk::analytics::Rect boundingBox;
+    // confidence score of the face detection
+    const float confidence;
+    // 5 key face landmarks
+    const Landmarks landmarks;
+    // high dimensional face descriptor for recognition (arcface output)
+    const FaceEmbedding embedding;  // Typically 512-dimensional for standard ArcFace models
+    // a unique id assigned to this face track over multiple frames
+    const nx::sdk::Uuid trackId;
+    // the class label is almost always "face"
+    const std::string classLabel = kFaceClassLabel;
+
+    // Recognized person name ("unknown" if no match above threshold)
+    std::string recognizedName = "unknown";
+
+    // Similarity score (cosine similarity, 0.0 to 1.0 after normalization)
+    float bestMatchScore = 0.0f;
+
+    std::string recognizedWatchlist = "unknown";
+};
 
 /**
  * stores five key facial landmarks (two eyes, noses, two mouth corners)

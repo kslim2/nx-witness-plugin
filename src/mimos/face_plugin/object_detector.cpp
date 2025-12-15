@@ -87,46 +87,46 @@ void ObjectDetector::loadFaceDatabase()
     constexpr size_t embeddingByteSize = kArcFaceEmbeddingSize * sizeof(float);
     size_t loadedCount = 0;
 
-    // iterate through all file in the 'db' directory
-    for (const auto& entry : std::filesystem::directory_iterator(dbDir))
+    // supported subfolders
+    const std::vector<std::string> watchlists = {"whitelist", "blacklist"};
+
+    for (const auto& watchlistName: watchlists)
     {
-        if (entry.is_regular_file()  && entry.path().extension() == ".npy")
+        const auto watchlistDir = dbDir / watchlistName;
+
+        if (!std::filesystem::exists(watchlistDir) || !std::filesystem::is_directory(watchlistDir))
         {
-            const auto dbFilePath = entry.path();
-            const auto fileName = dbFilePath.stem().string(); // use filename (without extension) as the name
+            continue; // skip non-existing watchlist directories
+        }
 
-            std::ifstream file(dbFilePath, std::ios::binary | std::ios::ate);
-            if (!file.is_open())
+        for (const auto& entry: std::filesystem::directory_iterator(watchlistDir))
+        {
+            if (entry.is_regular_file() && entry.path().extension() == ".npy")
             {
-                continue; // skip if file cannot be opened
+                const auto dbFilePath = entry.path();
+                const std::string name = dbFilePath.stem().string();
+
+                std::ifstream file(dbFilePath, std::ios::binary | std::ios::ate);
+                if (!file.is_open()) continue;
+
+                const auto fileSize = file.tellg();
+                file.seekg(0, std::ios::beg);
+
+                if (fileSize != embeddingByteSize) continue;
+
+                std::vector<char> buffer(fileSize);
+                if (!file.read(buffer.data(), fileSize)) continue;
+
+                const float* rawData = reinterpret_cast<const float*>(buffer.data());
+
+                KnownFace face;
+                face.name = name;
+                face.watchlist = watchlistName;
+                face.embedding.assign(rawData, rawData + kArcFaceEmbeddingSize);
+
+                m_knownFaces.push_back(std::move(face));
+                loadedCount++;
             }
-
-            // determine file size
-            const auto fileSize = file.tellg();
-            file.seekg(0, std::ios::beg);
-
-            // check if the file size matches exactly one 512-D embedding
-            if (fileSize != embeddingByteSize)
-            {
-                continue; // skip invalid file size
-            }
-
-            // read the file content into a buffer
-            std::vector<char> buffer(fileSize);
-            if (!file.read(buffer.data(), fileSize))
-            {
-                continue; // skip if read fails
-            }
-
-            // interpret the raw buffer as an array of floats
-            const float* rawData = reinterpret_cast<const float*>(buffer.data());
-            KnownFace face;
-            face.name = fileName; // use the filename stem as the name
-
-            // copy 512 floats (embedding) from the raw data
-            face.embedding.assign(rawData, rawData + kArcFaceEmbeddingSize);
-            m_knownFaces.push_back(std::move(face));
-            loadedCount++;
         }
     }
 
@@ -284,6 +284,7 @@ DetectionList ObjectDetector::processData(const Mat& image)
 
             // step 3: recognition (compare embedding against known faces)
             std::string recognizedName = "unknown";
+            std::string recognizedWatchlist = "unknown";
             float bestMatchScore = 0.0f;
 
             for (const auto& knownFace: m_knownFaces)
@@ -296,6 +297,8 @@ DetectionList ObjectDetector::processData(const Mat& image)
                     if (bestMatchScore > kRecognitionThreshold)
                     {
                         recognizedName = knownFace.name;
+                        // "whitelist" or "blacklist"
+                        recognizedWatchlist = knownFace.watchlist; 
                     }
                 }
             }
@@ -313,7 +316,8 @@ DetectionList ObjectDetector::processData(const Mat& image)
                         /*trackId*/nx::sdk::Uuid(), // temporary uuid. will be update by objectTracker
                         /*classLabel*/kFaceClassLabel, // defined as "face" in detection.h
                         /*name*/recognizedName, // recognized name metadata
-                        /*similarityScore*/bestMatchScore // recognition score metadata
+                        /*similarityScore*/bestMatchScore, // recognition score metadata
+                        /*watchlist*/recognizedWatchlist // watchlist metadata
                     }
                 )
             );
