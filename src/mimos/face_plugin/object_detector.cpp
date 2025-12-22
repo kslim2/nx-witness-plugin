@@ -303,10 +303,17 @@ DetectionList ObjectDetector::processData(const Mat& image)
                 }
             }
 
+            float x = normXMin;
+            float y = normYMin;
+            float w = normXMax - normXMin;
+            float h = normYMax - normYMin;
+
+            nx::sdk::analytics::Rect rect(x, y, w, h);
+
             // Then in Detection creation:
             finalDetections.push_back(
                 std::make_shared<Detection>(Detection{
-                    nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normXMin, normYMax - normYMin),
+                    rect,
                     confidence,
                     landmarks,
                     std::move(embedding),

@@ -38,7 +38,7 @@ DeviceAgent::DeviceAgent(
     ConsumingDeviceAgent(deviceInfo, /*enableOutput*/ true),
     m_objectDetector(std::make_unique<ObjectDetector>(
         pluginHomeDir / "models",
-        pluginHomeDir / "face_db"
+        pluginHomeDir / "db"
     )),
     m_objectTracker(std::make_unique<ObjectTracker>())
 {
