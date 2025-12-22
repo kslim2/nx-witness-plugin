@@ -306,7 +306,7 @@ DetectionList ObjectDetector::processData(const Mat& image)
             // Then in Detection creation:
             finalDetections.push_back(
                 std::make_shared<Detection>(Detection{
-                    nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normYMin, normYMax - normYMin),
+                    nx::sdk::analytics::Rect(normXMin, normYMin, normXMax - normXMin, normYMax - normYMin),
                     confidence,
                     landmarks,
                     std::move(embedding),
@@ -398,7 +398,6 @@ void ObjectDetector::loadModel()
 
     // set preferred backend (cpu is usually safer for initial setup)
     m_net_detector->setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
-    m_net_embedder->setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
 }
 
 
