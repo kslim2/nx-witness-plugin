@@ -385,6 +385,7 @@ void ObjectDetector::loadModel()
 
     // set preferred backend (cpu is usually safer for initial setup)
     m_net_detector->setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
+    m_net_detector->setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
 
     // load model 2 : embedder (Arcface - generate 512D feature vector)
     static const auto embedderPath = m_modelPath / "arc.onnx";
@@ -402,9 +403,6 @@ void ObjectDetector::loadModel()
     // throw exception is not the embedder model not found
     if (!m_embedderLoaded)
         throw ObjectDetectorInitializationError("ArcFace model loading failed: Network is empty.");
-
-    // set preferred backend (cpu is usually safer for initial setup)
-    m_net_detector->setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
 }
 
 
