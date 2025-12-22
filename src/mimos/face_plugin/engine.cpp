@@ -41,13 +41,11 @@ void Engine::doObtainDeviceAgent(Result<IDeviceAgent*>* outResult, const IDevice
  */
 std::string Engine::manifestString() const
 {
-    // Ask the Server to supply uncompressed video frames in BGR format, as it is native format for
-    // OpenCV.
-    return /*suppress newline*/ 1 + R"json(
-{
-    "capabilities": "needUncompressedVideoFrames_bgr"
-}
-)json";
+    return R"json(
+    {
+        "capabilities": ["needUncompressedVideoFrames_bgr"]
+    }
+    )json";
 }
 
 } // namespace face_plugin

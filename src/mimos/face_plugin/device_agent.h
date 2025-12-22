@@ -30,8 +30,6 @@ public:
     virtual ~DeviceAgent() override;
 
 protected:
-    virtual std::string manifestString() const override;
-
     virtual bool pushUncompressedVideoFrame(
         const nx::sdk::analytics::IUncompressedVideoFrame* videoFrame) override;
 
@@ -54,10 +52,7 @@ private:
         const nx::sdk::analytics::IUncompressedVideoFrame* videoFrame);
 
 private:
-    // const std::string kPersonObjectType = "nx.base.Person";
-    // const std::string kCatObjectType = "nx.base.Cat";
-    // const std::string kDogObjectType = "nx.base.Dog";
-    const std::string kFaceObjectType = "nx.base.Face";
+    const std::string kFaceObjectType = "mimos.face";
 
     const std::string kDetectionEventType = "mimos.face_detection.detection";
     const std::string kDetectionEventCaptionSuffix = " detected";

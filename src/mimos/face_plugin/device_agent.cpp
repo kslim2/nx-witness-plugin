@@ -55,71 +55,6 @@ DeviceAgent::~DeviceAgent()
 }
 
 /**
- *  @return JSON with the particular structure. Note that it is possible to fill in the values
- * that are not known at compile time, but should not depend on the DeviceAgent settings.
- */
-std::string DeviceAgent::manifestString() const
-{
-    return R"json(
-{
-    "id": "mimos.face.recognition",
-    "name": "Mimos Face Recognition",
-    "description": "Face detection and recognition with whitelist/blacklist support",
-    "version": "1.0.0",
-    "vendor": "mimos",
-    "type": "server",
-    "capabilities": ["objectDetection"],
-    "objectTypes": [
-        {
-            "id": "mimos.face",
-            "name": "Face"
-        }
-    ],
-    "attributes": [
-        {
-            "name": "Name",
-            "type": "String",
-            "displayName": "Recognized Name"
-        },
-        {
-            "name": "Watchlist",
-            "type": "String",
-            "displayName": "Watchlist",
-            "values": ["whitelist", "blacklist", "unknown"]
-        },
-        {
-            "name": "Similarity",
-            "type": "Number",
-            "unit": "%",
-            "displayName": "Similarity Score"
-        },
-        {
-            "name": "Detection Confidence",
-            "type": "Number",
-            "unit": "%"
-        }
-    ],
-    "eventTypes": [
-        {
-            "id": "mimos.face.detected",
-            "name": "Face Detected"
-        },
-        {
-            "id": "mimos.face.recognized.blacklist",
-            "name": "Blacklisted Person Detected",
-            "captionTemplate": "ALERT: Blacklisted - {attr:Name}"
-        },
-        {
-            "id": "mimos.face.recognized.whitelist",
-            "name": "Whitelisted Person Detected",
-            "captionTemplate": "Whitelisted: {attr:Name}"
-        }
-    ]
-}
-)json";
-}
-
-/**
  * Called when the Server sends a new uncompressed frame from a camera.
  */
 bool DeviceAgent::pushUncompressedVideoFrame(const IUncompressedVideoFrame* videoFrame)
@@ -262,20 +197,20 @@ Ptr<ObjectMetadataPacket> DeviceAgent::detectionsToObjectMetadataPacket(
         // === RECOGNITION ATTRIBUTES (THIS IS THE KEY PART) ===
         // Name of recognized person (or "unknown")
         objectMetadata->addAttribute(makePtr<Attribute>(
-            "Name"s, detection->recognizedName));
+            "Name", detection->recognizedName));
 
         // Watchlist: "whitelist", "blacklist", or "unknown"
         objectMetadata->addAttribute(makePtr<Attribute>(
-            "Watchlist"s, detection->watchlist));
+            "Watchlist", detection->watchlist));
 
         // Similarity score (as percentage)
         objectMetadata->addAttribute(makePtr<Attribute>(
-            "Similarity"s,
+            "Similarity",
             nx::kit::utils::format("%.1f%%", detection->similarityScore * 100.0f)));
 
         // Optional: Detection confidence
         objectMetadata->addAttribute(makePtr<Attribute>(
-            "Detection Confidence"s,
+            "Detection Confidence",
             nx::kit::utils::format("%.1f%%", detection->confidence * 100.0f)));
 
         objectMetadataPacket->addItem(objectMetadata.get());
@@ -326,7 +261,7 @@ DeviceAgent::MetadataPacketList DeviceAgent::processFrame(
             {
                 auto eventPacket = makePtr<EventMetadataPacket>();
                 auto event = makePtr<EventMetadata>();
-                event->setTypeId("mimos.face.recognized.blacklist");
+                event->setTypeId("mimos.face.blacklist");
                 event->setCaption("Blacklisted person: " + detection->recognizedName);
                 event->setDescription("Similarity: " + std::to_string(detection->similarityScore * 100) + "%");
                 event->setIsActive(true);

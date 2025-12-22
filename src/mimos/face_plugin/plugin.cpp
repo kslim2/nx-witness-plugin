@@ -32,15 +32,30 @@ Result<IEngine*> Plugin::doObtainEngine()
  */
 std::string Plugin::manifestString() const
 {
-    return /*suppress newline*/ 1 + R"json(
+    return R"json(
 {
-    "id": "sample.opencv_object_detection",
-    "name": "OpenCV object detection",
-    "description": ")json"
-        "This plugin is for object detection and tracking. It's based on OpenCV."
-        R"json(",
+    "id": "mimos.face.recognition",
+    "name": "Mimos Face Recognition",
+    "description": "Performs face detection (RetinaFace), embedding (ArcFace), and whitelist/blacklist matching from db folder.",
     "version": "1.0.0",
-    "vendor": "Sample Inc."
+    "vendor": mimos",
+    "capabilities": ["objectDetection", "objectTracking"],
+    "objectTypes": [
+    {
+        "id": "mimos.face",
+        "name": "Face",
+        "attributes": [
+            { "id": "Name", "name": "Recognized Name", "type": "String" },
+            { "id": "Watchlist", "name": "Watchlist", "type": "String" },
+            { "id": "Similarity", "name": "Similarity Score", "type": "Number", "unit": "%" },
+            { "id": "Detection Confidence", "name": "Detection Confidence", "type": "Number", "unit": "%" }
+        ]
+    }
+    ],
+    "eventTypes": [
+        { "id": "mimos.face.blacklist", "name": "Blacklisted Person Detected" },
+        { "id": "mimos.face.whitelist", "name": "Whitelisted Person Detected" }
+    ]
 }
 )json";
 }
