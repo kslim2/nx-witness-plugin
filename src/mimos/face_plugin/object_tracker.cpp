@@ -273,8 +273,7 @@ ObjectTracker::Result ObjectTracker::runImpl(
 
     TrackedObjects detectionsToTrack = convertDetectionsToTrackedObjects(
         /*frame*/ frame,
-        /*detections*/ detections,
-        /*classLabels*/ &classLabels);
+        /*detections*/ detections);
 
     // Perform tracking and extract tracked detections.
     m_tracker->process(frame.cvMat, detectionsToTrack, (uint64_t) frame.timestampUs);
