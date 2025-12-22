@@ -53,8 +53,7 @@ cv::detail::tracking::tbm::TrackedObjects convertDetectionsToTrackedObjects(
 
 std::shared_ptr<DetectionInternal> convertTrackedObjectToDetection(
     const Frame& frame,
-    const TrackedObject& trackedDetection,
-    // const std::string& classLabel,
+    const cv::detail::tracking::tbm::TrackedObject& trackedDetection,
     IdMapper* idMapper);
 
 DetectionInternalList convertTrackedObjectsToDetections(
