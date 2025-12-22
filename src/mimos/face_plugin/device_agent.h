@@ -36,6 +36,8 @@ protected:
     virtual void doSetNeededMetadataTypes(
         nx::sdk::Result<void>* outValue,
         const nx::sdk::analytics::IMetadataTypes* neededMetadataTypes) override;
+        
+    virtual std::string manifestString() const override;
 
 private:
     void reinitializeObjectTrackerOnFrameSizeChanges(const Frame& frame);
@@ -63,6 +65,7 @@ private:
 
     /** Should work on modern PCs. */
     static constexpr int kDetectionFramePeriod = 2;
+    
 
 private:
     bool m_terminated = false;

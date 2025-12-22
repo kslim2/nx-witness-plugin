@@ -174,6 +174,11 @@ DeviceAgent::MetadataPacketList DeviceAgent::eventsToEventMetadataPacketList(
     return result;
 }
 
+std::string DeviceAgent::manifestString() const
+{
+    return "{}";
+}
+
 Ptr<ObjectMetadataPacket> DeviceAgent::detectionsToObjectMetadataPacket(
     const DetectionList& detections,
     int64_t timestampUs)
