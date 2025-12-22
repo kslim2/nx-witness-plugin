@@ -40,8 +40,7 @@ void IdMapper::removeAllExcept(const std::set<Uuid>& idsToKeep)
  */
 TrackedObjects convertDetectionsToTrackedObjects(
     const Frame& frame,
-    const DetectionList& detections,
-    ClassLabelMap* inOutClassLabels)
+    const DetectionList& detections)
 {
     TrackedObjects result;
 
@@ -51,11 +50,6 @@ TrackedObjects convertDetectionsToTrackedObjects(
             detection->boundingBox,
             frame.width,
             frame.height);
-
-        inOutClassLabels->insert(std::make_pair(CompositeDetectionId{
-            frame.index,
-            cvRect},
-            detection->classLabel));
 
         result.push_back(TrackedObject(
             cvRect,

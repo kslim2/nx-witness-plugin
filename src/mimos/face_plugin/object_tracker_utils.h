@@ -49,12 +49,11 @@ using ClassLabelMap = std::map<const CompositeDetectionId, std::string>;
 
 cv::detail::tracking::tbm::TrackedObjects convertDetectionsToTrackedObjects(
     const Frame& frame,
-    const DetectionList& detections,
-    ClassLabelMap* inOutClassLabels);
+    const DetectionList& detections);
 
 std::shared_ptr<DetectionInternal> convertTrackedObjectToDetection(
     const Frame& frame,
-    const cv::detail::tracking::tbm::TrackedObject& trackedDetection,
+    const TrackedObject& trackedDetection,
     // const std::string& classLabel,
     IdMapper* idMapper);
 
@@ -87,7 +86,7 @@ template<> struct less<
             return lhs.rect.y < rhs.rect.y;
         if (lhs.rect.width != rhs.rect.width)
             return lhs.rect.width < rhs.rect.width;
-        return lhs.rect.width < rhs.rect.width;
+        return lhs.rect.height < rhs.rect.height;
     }
 };
 }
