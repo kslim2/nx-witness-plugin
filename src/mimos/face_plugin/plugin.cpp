@@ -38,7 +38,7 @@ std::string Plugin::manifestString() const
     "name": "Mimos Face Recognition",
     "description": "Performs face detection (RetinaFace), embedding (ArcFace), and whitelist/blacklist matching from db folder.",
     "version": "1.0.0",
-    "vendor": mimos",
+    "vendor": "mimos",
     "capabilities": ["objectDetection", "objectTracking"],
     "objectTypes": [
     {

@@ -145,7 +145,7 @@ DeviceAgent::MetadataPacketList DeviceAgent::eventsToEventMetadataPacketList(
             eventMetadata->setCaption(caption);
             eventMetadata->setDescription(description);
             eventMetadata->setIsActive(event->eventType == EventType::detection_started);
-            eventMetadata->setTypeId(kProlongedDetectionEventType);
+            // eventMetadata->setTypeId(kProlongedDetectionEventType);
 
             const auto eventMetadataPacket = makePtr<EventMetadataPacket>();
             eventMetadataPacket->addItem(eventMetadata.get());
@@ -162,7 +162,7 @@ DeviceAgent::MetadataPacketList DeviceAgent::eventsToEventMetadataPacketList(
             eventMetadata->setCaption(caption);
             eventMetadata->setDescription(description);
             eventMetadata->setIsActive(true);
-            eventMetadata->setTypeId(kDetectionEventType);
+            // eventMetadata->setTypeId(kDetectionEventType);
 
             objectDetectedEventMetadataPacket->addItem(eventMetadata.get());
         }
@@ -254,7 +254,11 @@ DeviceAgent::MetadataPacketList DeviceAgent::processFrame(
             detectionsToObjectMetadataPacket(objectTrackerResult.detections, frame.timestampUs);
         const auto& eventMetadataPacketList = eventsToEventMetadataPacketList(
             objectTrackerResult.events, frame.timestampUs);
+        
         MetadataPacketList result;
+        if (objectMetadataPacket)
+            result.push_back(objectMetadataPacket);
+        
         for (const auto& detection : objectTrackerResult.detections)
         {
             if (detection->watchlist == "blacklist" && detection->recognizedName != "unknown")
@@ -273,7 +277,7 @@ DeviceAgent::MetadataPacketList DeviceAgent::processFrame(
             {
                 auto eventPacket = makePtr<EventMetadataPacket>();
                 auto event = makePtr<EventMetadata>();
-                event->setTypeId("mimos.face.recognized.whitelist");
+                event->setTypeId("mimos.face.whitelist");
                 event->setCaption("Whitelisted person: " + detection->recognizedName);
                 event->setDescription("Similarity: " + std::to_string(detection->similarityScore * 100) + "%");
                 event->setIsActive(true);

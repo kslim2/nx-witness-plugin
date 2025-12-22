@@ -54,12 +54,12 @@ private:
 private:
     const std::string kFaceObjectType = "mimos.face";
 
-    const std::string kDetectionEventType = "mimos.face_detection.detection";
+    // const std::string kDetectionEventType = "mimos.face_detection.detection";
     const std::string kDetectionEventCaptionSuffix = " detected";
     const std::string kDetectionEventDescriptionSuffix = " detected";
 
-    const std::string kProlongedDetectionEventType =
-        "mimos.face_detection.prolongedDetection";
+    // const std::string kProlongedDetectionEventType =
+    //     "mimos.face_detection.prolongedDetection";
 
     /** Should work on modern PCs. */
     static constexpr int kDetectionFramePeriod = 2;
