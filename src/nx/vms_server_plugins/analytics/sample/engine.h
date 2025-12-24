@@ -18,12 +18,21 @@ public:
     virtual ~Engine() override;
 
 protected:
+    /**
+     * called by the server to get the engine manifest
+     * (object types, event types, etc.).
+     */
     virtual std::string manifestString() const override;
 
 protected:
+    /**
+     * Called a new Device (camera) is assigned to this Engine in
+     * the server.
+     */
     virtual void doObtainDeviceAgent(
         nx::sdk::Result<nx::sdk::analytics::IDeviceAgent*>* outResult,
         const nx::sdk::IDeviceInfo* deviceInfo) override;
+
 };
 
 } // namespace sample

@@ -35,7 +35,7 @@ std::string Plugin::manifestString() const
 {
     return /*suppress newline*/ 1 + (const char*) R"json(
 {
-    "id": "nx.sample",
+    "id": "mimos.face_recognition",
     "name": "Face recognition",
     "description": "A simple plugin for face recogition",
     "version": "1.0.0",

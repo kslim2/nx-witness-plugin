@@ -42,18 +42,51 @@ void Engine::doObtainDeviceAgent(Result<IDeviceAgent*>* outResult, const IDevice
  */
 std::string Engine::manifestString() const
 {
-    // Ask the Server to supply compressed video frames. In case the uncompressed frame is
-    // required, "needUncompressedVideoFrames_yuv420" capability can be used to supply
-    // uncompressed video frames in YUV420 format (see https://en.wikipedia.org/wiki/YUV).
-    //
-    // Note that YUV420 format is used internally by the Server, therefore requires minimum
-    // resources for decoding, thus it is the recommended format, in case the uncompressed frame
-    // is needed.
     return /*suppress newline*/ 1 + (const char*) R"json(
-{
-    "capabilities": ""
-}
-)json";
+    {
+        "typeLibrary":
+        {
+            "objectTypes":
+            [
+                {
+                    "id": "mimos.face",
+                    "name": "Face",
+                    "attributes":
+                    [
+                        { "type": "String", "name": "personName", "description": "Recognized person name" },
+                        { "type": "String", "name": "listType", "description": "whitelist or blacklist" },
+                        { "type": "Number", "name": "confidence", "subtype": "float", "unit": "%", "minValue": 0, "maxValue": 100 }
+                    ]
+                }
+            ],
+            "eventTypes":
+            [
+                {
+                    "id": "mimos.face.whitelist_match",
+                    "name": "Whitelisted Person Detected",
+                    "description": "A person from the whitelist was recognized"
+                },
+                {
+                    "id": "mimos.face.blacklist_match",
+                    "name": "Blacklisted Person Detected",
+                    "description": "A person from the blacklist was recognized"
+                }
+            ]
+        },
+        "supportedTypes":
+        [
+            { "objectTypeId": "nx.base.Camera" }
+        ],
+        "streamSelection":
+        {
+            "primaryStreamPreference": "high"
+        },
+        "deviceAgent":
+        {
+            "capabilities": "needUncompressedVideoFrames|disableLiveStreamIfNoActiveObjects"
+        }
+    }
+    )json";
 }
 
 } // namespace sample
