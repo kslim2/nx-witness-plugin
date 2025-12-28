@@ -1,0 +1,10 @@
+^C:\USERS\A\DOCUMENTS\METADATA_SDK\NX_KIT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

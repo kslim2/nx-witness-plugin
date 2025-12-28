@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\build\CMakeFiles\9567ae92b381ecbff70984ad51121447\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{62CCFB78-187B-3790-AE94-5199C6FF40EF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

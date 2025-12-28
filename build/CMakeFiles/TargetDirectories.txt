@@ -1,0 +1,8 @@
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/CMakeFiles/nx_sdk.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/CMakeFiles/opencv_object_detection_analytics_plugin.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/CMakeFiles/nx_kit.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/CMakeFiles/ALL_BUILD.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/disabled_ini_config_ut.dir
+C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/nx_kit_ut.dir

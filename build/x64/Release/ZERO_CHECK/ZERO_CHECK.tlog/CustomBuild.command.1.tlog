@@ -1,0 +1,10 @@
+^C:\USERS\A\DOCUMENTS\NX_OPEN_INTEGRATIONS\CPP\VMS_SERVER_PLUGINS\OPENCV_OBJECT_DETECTION_ANALYTICS_PLUGIN\STEP5\BUILD\CMAKEFILES\9567AE92B381ECBFF70984AD51121447\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/opencv_object_detection_analytics_plugin.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\detection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\device_agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_detector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\detection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\device_agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_detector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8E3BA7CC-036D-3892-BA87-30AFCA5F4DB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{054ECD92-1AB4-3D23-B44F-EE1B91B7D627}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

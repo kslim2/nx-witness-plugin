@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\utils_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\output_redirector_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\debug_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\test_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\json_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\flags_ut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8E3BA7CC-036D-3892-BA87-30AFCA5F4DB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{054ECD92-1AB4-3D23-B44F-EE1B91B7D627}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
