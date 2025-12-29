@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/a/Documents/metadata_sdk/nx_kit/unit_tests
+# Install script for directory: C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit/unit_tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

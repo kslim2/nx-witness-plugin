@@ -1,60 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\detection.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\detection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\device_agent.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\device_agent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\engine.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_detector.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_detector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_tracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker_utils.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_tracker_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\plugin.cpp">
+    <ClCompile Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\plugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\detection.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\detection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\device_agent.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\device_agent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\engine.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\event.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\exceptions.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\frame.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\geometry.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\geometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_detector.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_detector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_tracker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\object_tracker_utils.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\object_tracker_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\sample_company\vms_server_plugins\opencv_object_detection\plugin.h">
+    <ClInclude Include="C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\src\mimos\face_plugin\plugin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

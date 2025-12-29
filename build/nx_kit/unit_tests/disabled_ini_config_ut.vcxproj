@@ -87,7 +87,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -113,10 +113,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NX_INI_CONFIG_DISABLED;DISABLED_INI_CONFIG_UT_API=__declspec(dllexport);NX_KIT_API=;CMAKE_INTDIR=\"Debug\";disabled_ini_config_ut_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -143,7 +143,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -169,10 +169,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NX_INI_CONFIG_DISABLED;DISABLED_INI_CONFIG_UT_API=__declspec(dllexport);NX_KIT_API=;CMAKE_INTDIR=\"Release\";disabled_ini_config_ut_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -225,10 +225,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NX_INI_CONFIG_DISABLED;DISABLED_INI_CONFIG_UT_API=__declspec(dllexport);NX_KIT_API=;CMAKE_INTDIR=\"MinSizeRel\";disabled_ini_config_ut_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -255,7 +255,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -281,10 +281,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NX_INI_CONFIG_DISABLED;DISABLED_INI_CONFIG_UT_API=__declspec(dllexport);NX_KIT_API=;CMAKE_INTDIR=\"RelWithDebInfo\";disabled_ini_config_ut_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -310,9 +310,9 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/a/Documents/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
@@ -325,7 +325,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\build\nx_kit\unit_tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/a/Documents/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
@@ -338,7 +338,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\build\nx_kit\unit_tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/a/Documents/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
@@ -351,7 +351,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\a\Documents\nx_open_integrations\cpp\vms_server_plugins\opencv_object_detection_analytics_plugin\step5\build\nx_kit\unit_tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/a/Documents/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit/unit_tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5 -BC:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build --check-stamp-file C:/Users/a/Documents/nx_open_integrations/cpp/vms_server_plugins/opencv_object_detection_analytics_plugin/step5/build/nx_kit/unit_tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
@@ -367,15 +367,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\ini_config.h" />
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\ini_config.cpp" />
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\test.h" />
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\test.cpp" />
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\utils.h" />
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\src\nx\kit\utils.cpp" />
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_ut.cpp" />
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\disabled_ini_config_ut.h" />
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\disabled_ini_config_ut.cpp" />
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\ini_config.h" />
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\ini_config.cpp" />
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\test.h" />
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\test.cpp" />
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\utils.h" />
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\src\nx\kit\utils.cpp" />
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini_config_ut.cpp" />
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\disabled_ini_config_ut.h" />
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\disabled_ini_config_ut.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

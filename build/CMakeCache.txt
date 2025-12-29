@@ -204,7 +204,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to unpacked VMS Metadata SDK zip. Tested with version 5.1.1.37512.
-metadataSdkDir:PATH=C:/Users/a/Documents/metadata_sdk
+metadataSdkDir:PATH=C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk
 
 nxKitLibraryType:STRING=STATIC
 
@@ -217,7 +217,7 @@ nx_kit_test_BINARY_DIR:STATIC=C:/Users/a/Documents/nx_open_integrations/cpp/vms_
 nx_kit_test_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-nx_kit_test_SOURCE_DIR:STATIC=C:/Users/a/Documents/metadata_sdk/nx_kit
+nx_kit_test_SOURCE_DIR:STATIC=C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk/nx_kit
 
 //Dependencies for the target
 nx_sdk_LIB_DEPENDS:STATIC=general;nx_kit;

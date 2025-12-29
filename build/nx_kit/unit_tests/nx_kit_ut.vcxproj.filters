@@ -1,50 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\utils_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\utils_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\output_redirector_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\output_redirector_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\debug_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\debug_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\test_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\test_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini_config_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.c">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\json_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\json_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\flags_ut.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\flags_ut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\main.cpp">
+    <ClCompile Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini.h">
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.h">
+    <ClInclude Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\src\ini_config_c_usage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\a\Documents\metadata_sdk\nx_kit\unit_tests\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\a\Downloads\metavms-metadata_sdk-6.0.6.41837-universal\metadata_sdk\nx_kit\unit_tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
