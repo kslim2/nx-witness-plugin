@@ -41,8 +41,21 @@ std::string Plugin::manifestString() const
 }
 
 /**
- * Called by the server to instantiate the plugin
+ * Called by the server to instantiate the plugin object
+ * 
+ * The server requires the function to have C linkage, which
+ * leads to no c++ name mangling in the export table of plugin
+ * dynamic library, so that makes it possible to write plugins
+ * in any language and compiler.
+ * 
+ * NX_PLUGIN_API is the macro defined by CMake scripts for
+ * exporting the function
  */
+extern "C" NX_PLUGIN_API nx::sdk::IPlugin* createNxPlugin()
+{
+    // the object will be freed when the server calls releaseRef()
+    return new Plugin();
+}
 
 } // namespace plugin
 } // namespace mimos
