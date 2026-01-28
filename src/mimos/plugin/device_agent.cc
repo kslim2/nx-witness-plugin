@@ -7,3 +7,4 @@
 #include <nx/sdk/analytics/helpers/object_metadata_packet.h>
 
 #include "device_agent_manifest.h"
+#include "face_recognition_ini.h"
