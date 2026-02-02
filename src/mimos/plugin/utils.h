@@ -3,6 +3,8 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <optional>
+#include <filesystem>
 
 #include <nx/sdk/i_string_map.h>
 #include <nx/sdk/ptr.h>
@@ -11,63 +13,129 @@ namespace mimos
 {
 namespace plugin
 {
+namespace face_recognition
+{
 
-/**
- * Converts string like "true", "1", "yes" to boolean.
- * Used for reading plugin toggle settings from the VMS GUI.
- */
 bool toBool(std::string str);
-
-/**
- * Checks if a setting keys starts with a specific prefix.
- * Essential if you the objectTypeIdToGenerate prefixing logic.
- */
 bool startsWith(const std::string& str, const std::string& prefix);
 
-/**
- * Helper to keep values within a range (e.g., confidence 0.0 to 1.0)
- */
 template<typename T>
 T clamp(const T& value, const T& lowerBound, const T& upperBound)
 {
-    if (value < lowerBound) return lowerBound;
-    if (value > upperBound) return upperBound;
-
+    if (value < lowerBound)
+        return lowerBound;
+    if (value > upperBound)
+        return upperBound;
     return value;
 }
 
 /**
- * Load binary files from disk.
- * You will use this to load RetinaFace, Arcface, and Face embedding files.
+ * Load entire file content into memory as vector<char>
  */
 std::vector<char> loadFile(const std::string& path);
 
 /**
- * Converts the SDK's internal IStringMap into a standard C++ map.
- * This is the most important utility for reading camera-specific settings.
+ * Guess mime type from file extension (mainly for images)
  */
-std::map<std::string, std::string> toStdMap(
-    const nx::sdk::Ptr<const nx::sdk::IStringMap>& sdkMap
+std::string imageFormatFromPath(const std::string& path);
+
+bool isHttpOrHttpsUrl(const std::string& path);
+
+/**
+ * Join vector of strings with delimiter
+ */
+std::string join(
+    const std::vector<std::string>& strings,
+    const std::string& delimiter,
+    const std::string& itemPrefix = std::string(),
+    const std::string& itemPostfix = std::string()
 );
 
 /**
- * Scans a directory for .npy files and extracts the the person's name
- * from the filename.
- * @param directoryPath Path to the whitelist or blacklist directory.
- * @param isBlacklist Flag to mark the loaded embeddings as blacklisted.
+ * Convert NX SDK string map to std::map
  */
-std::vector<FaceEmbedding> loadEmbeddingsFromDir(
-    const std::string& directoryPath,
-    bool isBlacklist
+std::map<std::string, std::string> toStdMap(const nx::sdk::Ptr<const nx::sdk::IStringMap>& sdkMap);
+
+/**
+ * Simple optional-like class (original from stub)
+ */
+template<typename T>
+class SimpleOptional
+{
+public:
+    SimpleOptional() = default;
+    SimpleOptional(const T& value) : m_value(value), m_isInitialized(true) {}
+    
+    template<typename U>
+    SimpleOptional(const SimpleOptional<U>& other)
+        : m_value(other.value()), m_isInitialized(other.isInitialized()) {}
+
+    const T* operator->() const { return m_isInitialized ? &m_value : nullptr; }
+    T* operator->() { return m_isInitialized ? &m_value : nullptr; }
+    
+    const T& operator*() const { return m_value; }
+    T& operator*() { return m_value; }
+
+    template<typename U>
+    SimpleOptional& operator=(const SimpleOptional<U>& other)
+    {
+        m_value = other.value();
+        m_isInitialized = other.isInitialized();
+        return *this;
+    }
+
+    template<typename U>
+    SimpleOptional& operator=(U&& value)
+    {
+        m_value = std::forward<U>(value);
+        m_isInitialized = true;
+        return *this;
+    }
+
+    explicit operator bool() const { return m_isInitialized; }
+    const T& value() const { return m_value; }
+    bool isInitialized() const { return m_isInitialized; }
+    void reset() { m_isInitialized = false; }
+
+private:
+    T m_value{};
+    bool m_isInitialized = false;
+};
+
+// -------------------------------------------------------------
+// Added function for face recognition plugin
+// -------------------------------------------------------------
+
+/**
+ * Load a single .npy file containing a face embedding (typically 512 floats)
+ * Return empty vector on failure
+ */
+std::vector<float> loadNpyEmbedding(const std::string& path);
+
+/**
+ * Load all .npy files from a directory into a name -> embedding map
+ * Filename (without .npy) becomes the person name
+ */
+std::map<std::string, std::vector<float>> loadEmbeddingsFromDirectory(
+    const std::string& directoryPath
 );
 
 /**
- * Simplified .npy loader
- * Note: Real .npy files have a header. For ArcFace (512 floats)
- * 
- * This helper skips the header and reads the raw floats.
+ * Compute consine similarity between two normalized embeddings
+ * (ArcFace embeddings are usually L2-normalized)
+ * Returns value in [-1, 1], higher = more similar
  */
-std::vector<float> loadNpyVector(const std::string& path);
+float cosineSimilarity(const std::vector<float>&a, const std::vector<float>& b);
 
+/**
+ * Find the best match in a map of known embeddings
+ * Returns {name, similarity} of best match, or {"", -1} if none above threshold
+ */
+std::pair<std::string, float> findBestMatch(
+    const std::vector<float>& queryEmbedding,
+    const std::map<std::string, std::vector<float>>& knownEmbeddings,
+    float minSimilarityThreshold = 0.45f);
+
+} // namespace face_recognition
 } // namespace plugin
 } // namespace mimos
