@@ -68,9 +68,12 @@ target_compile_definitions(nx_sdk PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO}) #< 
 set(STUB_ANALYTICS_PLUGIN_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
 file(GLOB_RECURSE STUB_ANALYTICS_PLUGIN_SRC CONFIGURE_DEPENDS ${STUB_ANALYTICS_PLUGIN_SRC_DIR}/*)
 
+# add cnpy
+add_subdirectory(./external/cnpy)
+
 add_library(stub_analytics_plugin SHARED ${STUB_ANALYTICS_PLUGIN_SRC})
 target_include_directories(stub_analytics_plugin PRIVATE ${STUB_ANALYTICS_PLUGIN_SRC_DIR})
-target_link_libraries(stub_analytics_plugin PRIVATE nx_kit nx_sdk)
+target_link_libraries(stub_analytics_plugin PRIVATE nx_kit nx_sdk cnpy)
 
 target_compile_definitions(stub_analytics_plugin
     PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO}
