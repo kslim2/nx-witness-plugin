@@ -5,6 +5,7 @@
 
 namespace mimos {
 namespace plugin {
+namespace face_recognition
 
 class Plugin: public nx::sdk::analytics::Plugin
 {
@@ -15,5 +16,6 @@ protected:
 
 };
 
+} // namespace face_recognition
 } // namespace plugin
 } // namespace mimos

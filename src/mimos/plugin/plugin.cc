@@ -1,9 +1,15 @@
 #include "plugin.h"
+
+#include <nx/kit/utils.h>
+
 #include "engine.h"
+#include "face_recognition_ini.h"
 
 namespace mimos
 {
 namespace plugin
+{
+namespace face_recognition
 {
 
 using namespace nx::sdk;
@@ -27,35 +33,98 @@ Result<IEngine*> Plugin::doObtainEngine()
 */
 std::string Plugin::manifestString() const
 {
-    return /*suppress newline*/ 1 + R"json(
+    const static std::string manifest = /*suppress newline*/ 1 + (const char*) R"json(
     {
-        "id": "mimos.plugin",
-        "name": "OpenCV Face Recognition",
-        "description": ")json"
-            "This plugin is for face classification. It's based on OpenCV."
-            R"json(",
+        "id": "custom.face_recognition",
+        "name": "Face Recognition (RetinaFace + ArcFace)",
+        "description": "Detects faces using RetinaFace, extracts embeddings with ArcFace, and matches them against whitelist and blacklist. Generates object metadata and blacklist match events.",
         "version": "1.0.0",
-        "vendor": "mimos"
+        "vendor": "Your Company / Custom Plugin",
+        "isLicenseRequired": %s,
+        "supportedTypes": [
+            "nx.base.Person"
+        ],
+        "objectTypes": [
+            {
+                "id": "nx.base.Person",
+                "name": "Person",
+                "icon": "person"
+            },
+            {
+                "id": "face_recognition.whitelisted_person",
+                "name": "Whitelisted Person",
+                "icon": "person_check",
+                "attributes": [
+                    {"name": "personName", "displayName": "Name"},
+                    {"name": "similarity", "displayName": "Similarity", "type": "number"}
+                ]
+            },
+            {
+                "id": "face_recognition.blacklisted_person",
+                "name": "Blacklisted Person",
+                "icon": "person_danger",
+                "attributes": [
+                    {"name": "personName", "displayName": "Name"},
+                    {"name": "similarity", "displayName": "Similarity", "type": "number"}
+                ]
+            }
+        ],
+        "eventTypes": [
+            {
+                "id": "face_recognition.blacklist_match",
+                "name": "Blacklist Match Detected",
+                "description": "A blacklisted person was detected in the camera view",
+                "icon": "warning",
+                "isStateDependent": false
+            },
+            {
+                "id": "face_recognition.whitelist_match",
+                "name": "Whitelisted Person Detected",
+                "description": "A whitelisted (authorized) person was detected",
+                "icon": "check_circle",
+                "isStateDependent": false
+            }
+        ],
+        "settingsModel": [
+            {
+                "name": "whitelistDirectory",
+                "displayName": "Whitelist Directory",
+                "type": "string",
+                "defaultValue": "/opt/nx-face-plugin/whitelist"
+            },
+            {
+                "name": "blacklistDirectory",
+                "displayName": "Blacklist Directory",
+                "type": "string",
+                "defaultValue": "/opt/nx-face-plugin/blacklist"
+            },
+            {
+                "name": "minSimilarityThreshold",
+                "displayName": "Minimum Similarity Threshold",
+                "type": "number",
+                "defaultValue": 0.45,
+                "minimum": 0.0,
+                "maximum": 1.0
+            },
+            {
+                "name": "minFaceConfidence",
+                "displayName": "Minimum Face Detection Confidence",
+                "type": "number",
+                "defaultValue": 0.6,
+                "minimum": 0.0,
+                "maximum": 1.0
+            }
+        ]
     }
     )json";
+
+    return nx::kit::utils::format(
+        manifest,
+        ini().isLicenseRequired ? "true" : "false"
+    );
 }
 
-/**
- * Called by the server to instantiate the plugin object
- * 
- * The server requires the function to have C linkage, which
- * leads to no c++ name mangling in the export table of plugin
- * dynamic library, so that makes it possible to write plugins
- * in any language and compiler.
- * 
- * NX_PLUGIN_API is the macro defined by CMake scripts for
- * exporting the function
- */
-extern "C" NX_PLUGIN_API nx::sdk::IPlugin* createNxPlugin()
-{
-    // the object will be freed when the server calls releaseRef()
-    return new Plugin();
-}
 
+} // namespace face_recognition
 } // namespace plugin
 } // namespace mimos
