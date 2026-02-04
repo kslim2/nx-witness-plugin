@@ -17,9 +17,7 @@ using namespace nx::sdk::analytics;
 
 Result<IEngine*> Plugin::doObtainEngine()
 {
-    const auto utilityProvider = this->utilityProvider();
-    const std::filesystem::path pluginHomeDir = utilityProvider->homeDir();
-    return new Engine(pluginHomeDir);
+    return new Engine();
 }
 
 /**
@@ -33,86 +31,94 @@ Result<IEngine*> Plugin::doObtainEngine()
 */
 std::string Plugin::manifestString() const
 {
-    const static std::string manifest = /*suppress newline*/ 1 + (const char*) R"json(
+    const static std::string manifest = R"json(
     {
         "id": "custom.face_recognition",
         "name": "Face Recognition (RetinaFace + ArcFace)",
-        "description": "Detects faces using RetinaFace, extracts embeddings with ArcFace, and matches them against whitelist and blacklist. Generates object metadata and blacklist match events.",
+        "description": "Performs face detection with RetinaFace and recognition with ArcFace. Matches detected faces against whitelist and blacklist embeddings stored as .npy files. Generates object metadata and blacklist alert events.",
         "version": "1.0.0",
-        "vendor": "Your Company / Custom Plugin",
+        "vendor": "Custom Development",
         "isLicenseRequired": %s,
-        "supportedTypes": [
+
+        "supportedObjectTypes": [
             "nx.base.Person"
         ],
+
         "objectTypes": [
             {
                 "id": "nx.base.Person",
-                "name": "Person",
+                "name": "Person (Detected Face)",
                 "icon": "person"
             },
             {
-                "id": "face_recognition.whitelisted_person",
+                "id": "face_recognition.whitelisted",
                 "name": "Whitelisted Person",
                 "icon": "person_check",
                 "attributes": [
-                    {"name": "personName", "displayName": "Name"},
-                    {"name": "similarity", "displayName": "Similarity", "type": "number"}
+                    {"name": "name",        "displayName": "Name"},
+                    {"name": "similarity",  "displayName": "Similarity", "type": "number"}
                 ]
             },
             {
-                "id": "face_recognition.blacklisted_person",
+                "id": "face_recognition.blacklisted",
                 "name": "Blacklisted Person",
-                "icon": "person_danger",
+                "icon": "person_warning",
                 "attributes": [
-                    {"name": "personName", "displayName": "Name"},
-                    {"name": "similarity", "displayName": "Similarity", "type": "number"}
+                    {"name": "name",        "displayName": "Name"},
+                    {"name": "similarity",  "displayName": "Similarity", "type": "number"}
                 ]
             }
         ],
+
         "eventTypes": [
             {
-                "id": "face_recognition.blacklist_match",
-                "name": "Blacklist Match Detected",
-                "description": "A blacklisted person was detected in the camera view",
+                "id": "face_recognition.blacklist_alert",
+                "name": "Blacklisted Person Detected",
+                "description": "A person from the blacklist was detected",
                 "icon": "warning",
                 "isStateDependent": false
             },
             {
-                "id": "face_recognition.whitelist_match",
+                "id": "face_recognition.whitelist_detected",
                 "name": "Whitelisted Person Detected",
-                "description": "A whitelisted (authorized) person was detected",
+                "description": "A person from the whitelist was detected",
                 "icon": "check_circle",
                 "isStateDependent": false
             }
         ],
+
         "settingsModel": [
             {
-                "name": "whitelistDirectory",
+                "name": "whitelistPath",
                 "displayName": "Whitelist Directory",
                 "type": "string",
-                "defaultValue": "/opt/nx-face-plugin/whitelist"
+                "defaultValue": "/opt/face-plugin/whitelist",
+                "description": "Path to folder containing .npy whitelist embeddings"
             },
             {
-                "name": "blacklistDirectory",
+                "name": "blacklistPath",
                 "displayName": "Blacklist Directory",
                 "type": "string",
-                "defaultValue": "/opt/nx-face-plugin/blacklist"
+                "defaultValue": "/opt/face-plugin/blacklist",
+                "description": "Path to folder containing .npy blacklist embeddings"
             },
             {
-                "name": "minSimilarityThreshold",
-                "displayName": "Minimum Similarity Threshold",
+                "name": "matchThreshold",
+                "displayName": "Minimum Match Similarity",
                 "type": "number",
                 "defaultValue": 0.45,
                 "minimum": 0.0,
-                "maximum": 1.0
+                "maximum": 1.0,
+                "step": 0.01
             },
             {
-                "name": "minFaceConfidence",
-                "displayName": "Minimum Face Detection Confidence",
+                "name": "minDetectionScore",
+                "displayName": "Min Face Detection Confidence",
                 "type": "number",
-                "defaultValue": 0.6,
+                "defaultValue": 0.55,
                 "minimum": 0.0,
-                "maximum": 1.0
+                "maximum": 1.0,
+                "step": 0.01
             }
         ]
     }
@@ -124,7 +130,14 @@ std::string Plugin::manifestString() const
     );
 }
 
-
 } // namespace face_recognition
 } // namespace plugin
 } // namespace mimos
+
+// ---------------------------------------------
+// Nx Plugin Entry Point (required by the server)
+// ---------------------------------------------
+extern "C" nx::sdk::IPlugin* createNxPlugin()
+{
+    return new nx::vms_server_plugins::analytics::face_recognition::Plugin();
+}
