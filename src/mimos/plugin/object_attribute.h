@@ -1,26 +1,29 @@
 #pragma once
 
-#include <string>
 #include <map>
+#include <string>
 
 namespace mimos
 {
 namespace plugin
 {
+namespace face_recognition
+{
 
 /**
- * standard object type id for faces n the Nx Meta ecosystem
+ * Static map of example / demo attribute values for different object types.
+ * Used mainly for:
+ *  - plugin testing and debugging
+ *  - providing fallback or sample metadata when real detection is not active
+ *  - helping the VMS UI understand possible attribute types/values
+ *
+ * In production code you usually generate real values from inference results.
  */
-static const std::string kFaceObjectType = "nx.base.Face";
+extern const std::map<
+    /* objectTypeId */ std::string,
+    std::map</* attributeName */ std::string, /* attributeValue */ std::string>
+> kObjectAttributes;
 
-/**
- * Attributes names used by the plugin.
- * Using constants prevent typos in .cpp files
- */
-namespace Attributes {
-    static const std::string kName = "Name";
-    static const std::string kConfidence = "Confidence";
-}
-
-} // namespace mimos
+} // namespace face_recognition
 } // namespace plugin
+} // namespace mimos
