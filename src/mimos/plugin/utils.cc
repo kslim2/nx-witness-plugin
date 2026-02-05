@@ -42,6 +42,12 @@ std::vector<char> loadFile(const std::string& path)
     return std::vector<char>(std::istreambuf_iterator<char>(file), {});
 }
 
+/**
+ * Optional feature
+ * 
+ * Might be useful if you ever want to send images (crops,
+ * debug images) to NX or external system.
+ */
 std::string imageFormatFromPath(const std::string& path)
 {
     auto endsWith = [](const std::string& str, const std::string& suffix)
