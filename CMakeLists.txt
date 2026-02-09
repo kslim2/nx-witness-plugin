@@ -61,6 +61,11 @@ target_compile_definitions(nx_sdk PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO})
 add_subdirectory(external/cnpy)
 
 # ────────────────────────────────────────────────
+# zlib
+# ────────────────────────────────────────────────
+add_subdirectory(external/zlib)
+
+# ────────────────────────────────────────────────
 # face_recognition_plugin (shared library)
 # ────────────────────────────────────────────────
 set(PLUGIN_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
@@ -80,6 +85,7 @@ target_link_libraries(face_recognition_plugin
         nx_kit
         nx_sdk
         cnpy
+        zlibstatic
 )
 
 target_compile_definitions(face_recognition_plugin
