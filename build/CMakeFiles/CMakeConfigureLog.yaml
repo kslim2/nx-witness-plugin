@@ -23,8 +23,8 @@ events:
       
       The output was:
       0
-      MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 2/6/2026 5:52:41 PM.
+      MSBuild version 17.14.40+3e7442088 for .NET Framework
+      Build started 2/10/2026 2:57:54 AM.
       
       Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.13
+      Time Elapsed 00:00:02.16
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-eu8tji"
-      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-eu8tji"
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-vya82m"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-vya82m"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -83,40 +83,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-eu8tji'
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-vya82m'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fb602.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 2/6/2026 5:52:42 PM.
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_89d6f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:57:57 AM.
         
-        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eu8tji\\cmTC_fb602.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vya82m\\cmTC_89d6f.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_fb602.dir\\Debug\\".
+          Creating directory "cmTC_89d6f.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eu8tji\\Debug\\".
-          Creating directory "cmTC_fb602.dir\\Debug\\cmTC_fb602.tlog\\".
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vya82m\\Debug\\".
+          Creating directory "cmTC_89d6f.dir\\Debug\\cmTC_89d6f.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_fb602.dir\\Debug\\cmTC_fb602.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_fb602.dir\\Debug\\cmTC_fb602.tlog\\unsuccessfulbuild".
+          Creating "cmTC_89d6f.dir\\Debug\\cmTC_89d6f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_89d6f.dir\\Debug\\cmTC_89d6f.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fb602.dir\\Debug\\\\" /Fd"cmTC_fb602.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_89d6f.dir\\Debug\\\\" /Fd"cmTC_89d6f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fb602.dir\\Debug\\\\" /Fd"cmTC_fb602.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_89d6f.dir\\Debug\\\\" /Fd"cmTC_89d6f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eu8tji\\Debug\\cmTC_fb602.exe" /INCREMENTAL /ILK:"cmTC_fb602.dir\\Debug\\cmTC_fb602.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-eu8tji/Debug/cmTC_fb602.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-eu8tji/Debug/cmTC_fb602.lib" /MACHINE:X64  /machine:x64 cmTC_fb602.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_fb602.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eu8tji\\Debug\\cmTC_fb602.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vya82m\\Debug\\cmTC_89d6f.exe" /INCREMENTAL /ILK:"cmTC_89d6f.dir\\Debug\\cmTC_89d6f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-vya82m/Debug/cmTC_89d6f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-vya82m/Debug/cmTC_89d6f.lib" /MACHINE:X64  /machine:x64 cmTC_89d6f.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_89d6f.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vya82m\\Debug\\cmTC_89d6f.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_fb602.dir\\Debug\\cmTC_fb602.tlog\\unsuccessfulbuild".
-          Touching "cmTC_fb602.dir\\Debug\\cmTC_fb602.tlog\\cmTC_fb602.lastbuildstate".
-        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eu8tji\\cmTC_fb602.vcxproj" (default targets).
+          Deleting file "cmTC_89d6f.dir\\Debug\\cmTC_89d6f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_89d6f.dir\\Debug\\cmTC_89d6f.tlog\\cmTC_89d6f.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vya82m\\cmTC_89d6f.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.75
+        Time Elapsed 00:00:01.98
         
       exitCode: 0
   -
@@ -162,8 +162,8 @@ events:
       
       The output was:
       0
-      MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 2/6/2026 5:52:43 PM.
+      MSBuild version 17.14.40+3e7442088 for .NET Framework
+      Build started 2/10/2026 2:57:59 AM.
       
       Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -192,7 +192,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.77
+      Time Elapsed 00:00:02.06
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -211,8 +211,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-tdxeds"
-      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-tdxeds"
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ci7n2z"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ci7n2z"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -222,40 +222,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-tdxeds'
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ci7n2z'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e94bf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 2/6/2026 5:52:44 PM.
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c2d79.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:02 AM.
         
-        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdxeds\\cmTC_e94bf.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ci7n2z\\cmTC_c2d79.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_e94bf.dir\\Debug\\".
+          Creating directory "cmTC_c2d79.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdxeds\\Debug\\".
-          Creating directory "cmTC_e94bf.dir\\Debug\\cmTC_e94bf.tlog\\".
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ci7n2z\\Debug\\".
+          Creating directory "cmTC_c2d79.dir\\Debug\\cmTC_c2d79.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_e94bf.dir\\Debug\\cmTC_e94bf.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_e94bf.dir\\Debug\\cmTC_e94bf.tlog\\unsuccessfulbuild".
+          Creating "cmTC_c2d79.dir\\Debug\\cmTC_c2d79.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c2d79.dir\\Debug\\cmTC_c2d79.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e94bf.dir\\Debug\\\\" /Fd"cmTC_e94bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2d79.dir\\Debug\\\\" /Fd"cmTC_c2d79.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e94bf.dir\\Debug\\\\" /Fd"cmTC_e94bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2d79.dir\\Debug\\\\" /Fd"cmTC_c2d79.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdxeds\\Debug\\cmTC_e94bf.exe" /INCREMENTAL /ILK:"cmTC_e94bf.dir\\Debug\\cmTC_e94bf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-tdxeds/Debug/cmTC_e94bf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-tdxeds/Debug/cmTC_e94bf.lib" /MACHINE:X64  /machine:x64 cmTC_e94bf.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_e94bf.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdxeds\\Debug\\cmTC_e94bf.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ci7n2z\\Debug\\cmTC_c2d79.exe" /INCREMENTAL /ILK:"cmTC_c2d79.dir\\Debug\\cmTC_c2d79.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ci7n2z/Debug/cmTC_c2d79.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ci7n2z/Debug/cmTC_c2d79.lib" /MACHINE:X64  /machine:x64 cmTC_c2d79.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_c2d79.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ci7n2z\\Debug\\cmTC_c2d79.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_e94bf.dir\\Debug\\cmTC_e94bf.tlog\\unsuccessfulbuild".
-          Touching "cmTC_e94bf.dir\\Debug\\cmTC_e94bf.tlog\\cmTC_e94bf.lastbuildstate".
-        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdxeds\\cmTC_e94bf.vcxproj" (default targets).
+          Deleting file "cmTC_c2d79.dir\\Debug\\cmTC_c2d79.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c2d79.dir\\Debug\\cmTC_c2d79.tlog\\cmTC_c2d79.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ci7n2z\\cmTC_c2d79.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.73
+        Time Elapsed 00:00:02.01
         
       exitCode: 0
   -
@@ -286,4 +286,527 @@ events:
       Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.44.35222.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckTypeSize.cmake:262 (check_include_file)"
+      - "external/zlib/CMakeLists.txt:82 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-biw9qm"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-biw9qm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-biw9qm'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_678b5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:05 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\cmTC_678b5.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_678b5.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\Debug\\".
+          Creating directory "cmTC_678b5.dir\\Debug\\cmTC_678b5.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_678b5.dir\\Debug\\cmTC_678b5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_678b5.dir\\Debug\\cmTC_678b5.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_678b5.dir\\Debug\\\\" /Fd"cmTC_678b5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_678b5.dir\\Debug\\\\" /Fd"cmTC_678b5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\Debug\\cmTC_678b5.exe" /INCREMENTAL /ILK:"cmTC_678b5.dir\\Debug\\cmTC_678b5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-biw9qm/Debug/cmTC_678b5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-biw9qm/Debug/cmTC_678b5.lib" /MACHINE:X64  /machine:x64 cmTC_678b5.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_678b5.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\Debug\\cmTC_678b5.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_678b5.dir\\Debug\\cmTC_678b5.tlog\\unsuccessfulbuild".
+          Touching "cmTC_678b5.dir\\Debug\\cmTC_678b5.tlog\\cmTC_678b5.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-biw9qm\\cmTC_678b5.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:02.02
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckTypeSize.cmake:263 (check_include_file)"
+      - "external/zlib/CMakeLists.txt:82 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-p3s2cf"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-p3s2cf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-p3s2cf'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_211ac.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:08 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\cmTC_211ac.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_211ac.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\Debug\\".
+          Creating directory "cmTC_211ac.dir\\Debug\\cmTC_211ac.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_211ac.dir\\Debug\\cmTC_211ac.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_211ac.dir\\Debug\\cmTC_211ac.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_211ac.dir\\Debug\\\\" /Fd"cmTC_211ac.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_211ac.dir\\Debug\\\\" /Fd"cmTC_211ac.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\Debug\\cmTC_211ac.exe" /INCREMENTAL /ILK:"cmTC_211ac.dir\\Debug\\cmTC_211ac.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-p3s2cf/Debug/cmTC_211ac.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-p3s2cf/Debug/cmTC_211ac.lib" /MACHINE:X64  /machine:x64 cmTC_211ac.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_211ac.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\Debug\\cmTC_211ac.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_211ac.dir\\Debug\\cmTC_211ac.tlog\\unsuccessfulbuild".
+          Touching "cmTC_211ac.dir\\Debug\\cmTC_211ac.tlog\\cmTC_211ac.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3s2cf\\cmTC_211ac.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:02.04
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckTypeSize.cmake:264 (check_include_file)"
+      - "external/zlib/CMakeLists.txt:82 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-sxvxub"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-sxvxub"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-sxvxub'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5fe63.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:11 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\cmTC_5fe63.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_5fe63.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\Debug\\".
+          Creating directory "cmTC_5fe63.dir\\Debug\\cmTC_5fe63.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_5fe63.dir\\Debug\\cmTC_5fe63.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_5fe63.dir\\Debug\\cmTC_5fe63.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5fe63.dir\\Debug\\\\" /Fd"cmTC_5fe63.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5fe63.dir\\Debug\\\\" /Fd"cmTC_5fe63.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\Debug\\cmTC_5fe63.exe" /INCREMENTAL /ILK:"cmTC_5fe63.dir\\Debug\\cmTC_5fe63.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-sxvxub/Debug/cmTC_5fe63.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-sxvxub/Debug/cmTC_5fe63.lib" /MACHINE:X64  /machine:x64 cmTC_5fe63.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_5fe63.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\Debug\\cmTC_5fe63.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_5fe63.dir\\Debug\\cmTC_5fe63.tlog\\unsuccessfulbuild".
+          Touching "cmTC_5fe63.dir\\Debug\\cmTC_5fe63.tlog\\cmTC_5fe63.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxvxub\\cmTC_5fe63.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.90
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "external/zlib/CMakeLists.txt:82 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-u8q4bu"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-u8q4bu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-u8q4bu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cf684.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:13 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_cf684.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\Debug\\".
+          Creating directory "cmTC_cf684.dir\\Debug\\cmTC_cf684.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_cf684.dir\\Debug\\cmTC_cf684.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_cf684.dir\\Debug\\cmTC_cf684.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf684.dir\\Debug\\\\" /Fd"cmTC_cf684.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf684.dir\\Debug\\\\" /Fd"cmTC_cf684.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c"
+          OFF64_T.c
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(29,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(30,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(31,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(32,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(33,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(29,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(30,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(31,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(32,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\OFF64_T.c(33,12): error C2065: 'off64_t': undeclared identifier [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u8q4bu\\cmTC_cf684.vcxproj]
+        
+            0 Warning(s)
+            5 Error(s)
+        
+        Time Elapsed 00:00:01.49
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "external/zlib/CMakeLists.txt:88 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-g0myif"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-g0myif"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-g0myif'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c28ee.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:15 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c28ee.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\Debug\\".
+          Creating directory "cmTC_c28ee.dir\\Debug\\cmTC_c28ee.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c28ee.dir\\Debug\\cmTC_c28ee.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c28ee.dir\\Debug\\cmTC_c28ee.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c28ee.dir\\Debug\\\\" /Fd"cmTC_c28ee.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c28ee.dir\\Debug\\\\" /Fd"cmTC_c28ee.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\Debug\\cmTC_c28ee.exe" /INCREMENTAL /ILK:"cmTC_c28ee.dir\\Debug\\cmTC_c28ee.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-g0myif/Debug/cmTC_c28ee.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-g0myif/Debug/cmTC_c28ee.lib" /MACHINE:X64  /machine:x64 cmTC_c28ee.dir\\Debug\\CheckFunctionExists.obj
+        CheckFunctionExists.obj : error LNK2019: unresolved external symbol fseeko referenced in function main [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\Debug\\cmTC_c28ee.exe : fatal error LNK1120: 1 unresolved externals [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj]
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          CheckFunctionExists.obj : error LNK2019: unresolved external symbol fseeko referenced in function main [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\Debug\\cmTC_c28ee.exe : fatal error LNK1120: 1 unresolved externals [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g0myif\\cmTC_c28ee.vcxproj]
+        
+            0 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:01.76
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "external/zlib/CMakeLists.txt:93 (check_include_file)"
+    checks:
+      - "Looking for stdarg.h"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-b8m0rg"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-b8m0rg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDARG_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-b8m0rg'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_db437.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:18 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\cmTC_db437.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_db437.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\Debug\\".
+          Creating directory "cmTC_db437.dir\\Debug\\cmTC_db437.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_db437.dir\\Debug\\cmTC_db437.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_db437.dir\\Debug\\cmTC_db437.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db437.dir\\Debug\\\\" /Fd"cmTC_db437.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db437.dir\\Debug\\\\" /Fd"cmTC_db437.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\Debug\\cmTC_db437.exe" /INCREMENTAL /ILK:"cmTC_db437.dir\\Debug\\cmTC_db437.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-b8m0rg/Debug/cmTC_db437.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-b8m0rg/Debug/cmTC_db437.lib" /MACHINE:X64  /machine:x64 cmTC_db437.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_db437.vcxproj -> C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\Debug\\cmTC_db437.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_db437.dir\\Debug\\cmTC_db437.tlog\\unsuccessfulbuild".
+          Touching "cmTC_db437.dir\\Debug\\cmTC_db437.tlog\\cmTC_db437.lastbuildstate".
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8m0rg\\cmTC_db437.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:02.19
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "external/zlib/CMakeLists.txt:98 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-rwnqzi"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-rwnqzi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-rwnqzi'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_551c6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:21 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\cmTC_551c6.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_551c6.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\Debug\\".
+          Creating directory "cmTC_551c6.dir\\Debug\\cmTC_551c6.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_551c6.dir\\Debug\\cmTC_551c6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_551c6.dir\\Debug\\cmTC_551c6.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_551c6.dir\\Debug\\\\" /Fd"cmTC_551c6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_551c6.dir\\Debug\\\\" /Fd"cmTC_551c6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\cmTC_551c6.vcxproj]
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\cmTC_551c6.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\cmTC_551c6.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\CheckIncludeFile.c(1,10): error C1083: Cannot open include file: 'unistd.h': No such file or directory [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rwnqzi\\cmTC_551c6.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:01.53
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "external/zlib/CMakeLists.txt:109 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE___ATTR__VIS_HIDDEN"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-lmiilt"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-lmiilt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE___ATTR__VIS_HIDDEN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-lmiilt'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_92493.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:23 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_92493.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\Debug\\".
+          Creating directory "cmTC_92493.dir\\Debug\\cmTC_92493.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_92493.dir\\Debug\\cmTC_92493.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_92493.dir\\Debug\\cmTC_92493.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___ATTR__VIS_HIDDEN /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92493.dir\\Debug\\\\" /Fd"cmTC_92493.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___ATTR__VIS_HIDDEN /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92493.dir\\Debug\\\\" /Fd"cmTC_92493.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c"
+          src.c
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,29): error C2061: syntax error: identifier '__attribute__' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,29): error C2059: syntax error: ';' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,56): error C2143: syntax error: missing ')' before 'string' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,64): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,65): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,66): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,29): error C2061: syntax error: identifier '__attribute__' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,29): error C2059: syntax error: ';' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,56): error C2143: syntax error: missing ')' before 'string' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,64): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,65): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\src.c(3,66): error C2059: syntax error: ')' [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lmiilt\\cmTC_92493.vcxproj]
+        
+            0 Warning(s)
+            6 Error(s)
+        
+        Time Elapsed 00:00:01.62
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "external/zlib/contrib/crc32vx/CMakeLists.txt:3 (CHECK_C_SOURCE_COMPILES)"
+    checks:
+      - "Performing Test HAS_S390X_SUPPORT"
+    directories:
+      source: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ck547d"
+      binary: "C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ck547d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAS_S390X_SUPPORT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/CMakeScratch/TryCompile-ck547d'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5e675.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.40+3e7442088 for .NET Framework
+        Build started 2/10/2026 2:58:25 AM.
+        
+        Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\cmTC_5e675.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_5e675.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\Debug\\".
+          Creating directory "cmTC_5e675.dir\\Debug\\cmTC_5e675.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_5e675.dir\\Debug\\cmTC_5e675.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_5e675.dir\\Debug\\cmTC_5e675.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAS_S390X_SUPPORT /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e675.dir\\Debug\\\\" /Fd"cmTC_5e675.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAS_S390X_SUPPORT /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e675.dir\\Debug\\\\" /Fd"cmTC_5e675.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\src.c"
+          src.c
+        C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\src.c(3,1): error C1189: #error:  [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\cmTC_5e675.vcxproj]
+        Done Building Project "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\cmTC_5e675.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\cmTC_5e675.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\src.c(3,1): error C1189: #error:  [C:\\Users\\mike\\Documents\\nx-witness-sdk\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ck547d\\cmTC_5e675.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:01.36
+        
+      exitCode: 1
 ...

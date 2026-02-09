@@ -1,0 +1,15 @@
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\adler32.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\adler32.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\compress.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\compress.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\crc32.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\crc32.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\deflate.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\deflate.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\gzclose.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\gzclose.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\gzlib.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\gzlib.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\gzread.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\gzread.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\gzwrite.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\gzwrite.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\inflate.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\inflate.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\infback.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\infback.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\inftrees.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\inftrees.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\inffast.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\inffast.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\trees.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\trees.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\uncompr.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\uncompr.obj
+C:\Users\mike\Documents\nx-witness-sdk\external\zlib\zutil.c;C:\Users\mike\Documents\nx-witness-sdk\build\external\zlib\zlib.dir\Release\zutil.obj

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mike\Documents\nx-witness-sdk\build\CMakeFiles\e938e21233ac85aacab4caf62fcc4143\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CABC432B-C1C5-3A82-B35C-0D8A0C5E4FEE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\face_recognition_ini.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\device_agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\device_agent_manifest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\face_recognition_ini.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\object_attribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mike\Documents\nx-witness-sdk\src\mimos\plugin\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mike\Documents\nx-witness-sdk\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A773BD61-C547-3CB7-B8C8-2C94A461F2DD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4288A6AF-D261-3556-B196-33C82776DE00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

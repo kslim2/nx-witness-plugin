@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Users/mike/Documents/nx-witness-sdk/build/CMakeFiles/cmake.verify_globs
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/CMakeLists.txt
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/add_subdirectory_exclude_test.cmake.in
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/add_subdirectory_test.cmake.in
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/find_package_no_components_test.cmake.in
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/find_package_test.cmake.in
+C:/Users/mike/Documents/nx-witness-sdk/external/zlib/test/find_package_wrong_components_test.cmake.in

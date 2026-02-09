@@ -56,14 +56,24 @@ target_link_libraries(nx_sdk PRIVATE nx_kit)
 target_compile_definitions(nx_sdk PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO})
 
 # ────────────────────────────────────────────────
+# zlib (static library) — must come BEFORE cnpy
+# ────────────────────────────────────────────────
+add_subdirectory(external/zlib)
+
+# Force CMake to see our built zlib
+set(ZLIB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/zlib" CACHE PATH "" FORCE)
+set(ZLIB_LIBRARY zlibstatic CACHE FILEPATH "" FORCE)
+set(ZLIB_FOUND TRUE CACHE BOOL "" FORCE)
+
+mark_as_advanced(ZLIB_INCLUDE_DIR ZLIB_LIBRARY ZLIB_FOUND)
+
+# ────────────────────────────────────────────────
 # cnpy (for .npy support)
 # ────────────────────────────────────────────────
 add_subdirectory(external/cnpy)
 
-# ────────────────────────────────────────────────
-# zlib
-# ────────────────────────────────────────────────
-add_subdirectory(external/zlib)
+# Make sure cnpy really uses our zlib (belt and suspenders approach)
+target_include_directories(cnpy PRIVATE ${ZLIB_INCLUDE_DIR})
 
 # ────────────────────────────────────────────────
 # face_recognition_plugin (shared library)
@@ -85,7 +95,7 @@ target_link_libraries(face_recognition_plugin
         nx_kit
         nx_sdk
         cnpy
-        zlibstatic
+        zlibstatic          # also link zlibstatic here for safety
 )
 
 target_compile_definitions(face_recognition_plugin
