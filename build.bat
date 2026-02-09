@@ -16,7 +16,7 @@ echo ==================================================
 echo Configuring CMake (Visual Studio 17 2022, x64)...
 echo ==================================================
 cmake -S .. -B . -G "Visual Studio 17 2022" -A x64 ^
-    -DmetadataSdkDir="C:/Users/a/Downloads/metavms-metadata_sdk-6.0.6.41837-universal/metadata_sdk"
+    -DmetadataSdkDir="C:/Users/mike/Downloads/metadata_sdk"
 
 if errorlevel 1 (
     echo ERROR: CMake configuration failed.

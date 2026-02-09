@@ -1,3 +1,6 @@
 [submodule "external/external/cnpy"]
 	path = external/external/cnpy
 	url = https://github.com/rogersce/cnpy.git
+[submodule "external/zlib"]
+	path = external/zlib
+	url = https://github.com/madler/zlib.git

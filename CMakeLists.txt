@@ -1,89 +1,107 @@
-## Copyright 2018-present Network Optix, Inc. Licensed under MPL 2.0: www.mozilla.org/MPL/2.0/
-
 cmake_minimum_required(VERSION 3.14)
-project(stub_analytics_plugin)
+project(face_recognition_analytics_plugin LANGUAGES CXX)
 
-set(metadataSdkDir "" CACHE PATH "Path to unpacked VMS Metadata SDK zip.")
+# Allow user to point to Metadata SDK
+set(metadataSdkDir "" CACHE PATH "Path to unpacked VMS Metadata SDK")
 if(metadataSdkDir STREQUAL "")
-    set(metadataSdkDir ${CMAKE_CURRENT_LIST_DIR}/../..) #< Assume building samples inside the SDK.
+    set(metadataSdkDir ${CMAKE_CURRENT_LIST_DIR}/../..)
     if(NOT EXISTS ${metadataSdkDir}/src/nx/sdk OR NOT EXISTS ${metadataSdkDir}/nx_kit/src/nx/kit)
-        message(FATAL_ERROR "Define metadataSdkDir cache variable to point to the unzipped SDK.")
+        message(FATAL_ERROR "Define metadataSdkDir to point to the unzipped Metadata SDK")
     endif()
 endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
-
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+# Linux: use $ORIGIN rpath
 if(UNIX)
-    # In Linux, for the plugin .so library, set `rpath` to "$ORIGIN" and do not set `runpath`, thus
-    # enabling the lookup of the dependencies in the plugin dir first.
     string(APPEND CMAKE_SHARED_LINKER_FLAGS " -Wl,--disable-new-dtags")
 endif()
+
 set(CMAKE_SKIP_BUILD_RPATH ON)
 set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
 set(CMAKE_INSTALL_RPATH "$ORIGIN")
 
-# Use all CPU cores by MSVC.
+# Faster MSVC builds
 if(MSVC)
     string(APPEND CMAKE_CXX_FLAGS " /MP")
-    # Do not create separate .pdb files for object files (workaround for mspdbsrv.exe bug, needed
-    # for using "/MP" flag).
     add_compile_options("/Z7")
 endif()
 
+# DLL import/export macros
 if(WIN32)
     set(API_IMPORT_MACRO "__declspec(dllimport)")
     set(API_EXPORT_MACRO "__declspec(dllexport)")
 else()
-    set(API_IMPORT_MACRO "")
     set(API_EXPORT_MACRO "__attribute__((visibility(\"default\")))")
 endif()
 
-#--------------------------------------------------------------------------------------------------
-# Define nx_kit lib, static.
-
+# ────────────────────────────────────────────────
+# nx_kit (static)
+# ────────────────────────────────────────────────
 set(nxKitLibraryType "STATIC" CACHE STRING "" FORCE)
 set(nxKitWithTests "NO" CACHE STRING "" FORCE)
-
 add_subdirectory(${metadataSdkDir}/nx_kit ${CMAKE_CURRENT_BINARY_DIR}/nx_kit)
 
-#--------------------------------------------------------------------------------------------------
-# Define nx_sdk lib, static, depends on nx_kit.
-
+# ────────────────────────────────────────────────
+# nx_sdk (static)
+# ────────────────────────────────────────────────
 set(SDK_SRC_DIR ${metadataSdkDir}/src)
-file(GLOB_RECURSE SDK_SRC CONFIGURE_DEPENDS ${SDK_SRC_DIR}/*)
-
+file(GLOB_RECURSE SDK_SRC CONFIGURE_DEPENDS ${SDK_SRC_DIR}/*.cpp ${SDK_SRC_DIR}/*.h)
 add_library(nx_sdk STATIC ${SDK_SRC})
 target_include_directories(nx_sdk PUBLIC ${SDK_SRC_DIR})
 target_link_libraries(nx_sdk PRIVATE nx_kit)
+target_compile_definitions(nx_sdk PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO})
 
-target_compile_definitions(nx_sdk PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO}) #< for nxLibContext()
+# ────────────────────────────────────────────────
+# cnpy (for .npy support)
+# ────────────────────────────────────────────────
+add_subdirectory(external/cnpy)
 
-#--------------------------------------------------------------------------------------------------
-# Define stub_analytics_plugin lib, dynamic, depends on nx_kit and nx_sdk.
+# ────────────────────────────────────────────────
+# face_recognition_plugin (shared library)
+# ────────────────────────────────────────────────
+set(PLUGIN_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
+file(GLOB_RECURSE PLUGIN_SRC
+    ${PLUGIN_SRC_DIR}/*.cpp
+    ${PLUGIN_SRC_DIR}/*.h
+)
 
-set(STUB_ANALYTICS_PLUGIN_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
-file(GLOB_RECURSE STUB_ANALYTICS_PLUGIN_SRC CONFIGURE_DEPENDS ${STUB_ANALYTICS_PLUGIN_SRC_DIR}/*)
+add_library(face_recognition_plugin SHARED ${PLUGIN_SRC})
 
-# add cnpy
-add_subdirectory(./external/cnpy)
+target_include_directories(face_recognition_plugin
+    PRIVATE ${PLUGIN_SRC_DIR}
+)
 
-add_library(stub_analytics_plugin SHARED ${STUB_ANALYTICS_PLUGIN_SRC})
-target_include_directories(stub_analytics_plugin PRIVATE ${STUB_ANALYTICS_PLUGIN_SRC_DIR})
-target_link_libraries(stub_analytics_plugin PRIVATE nx_kit nx_sdk cnpy)
+target_link_libraries(face_recognition_plugin
+    PRIVATE
+        nx_kit
+        nx_sdk
+        cnpy
+)
 
-target_compile_definitions(stub_analytics_plugin
+target_compile_definitions(face_recognition_plugin
     PRIVATE NX_PLUGIN_API=${API_EXPORT_MACRO}
 )
 
-if(NOT WIN32)
-    target_link_libraries(stub_analytics_plugin PRIVATE pthread)
+# Filesystem library for older gcc versions
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 9.0)
+    target_link_libraries(face_recognition_plugin PRIVATE stdc++fs)
 endif()
 
-#--------------------------------------------------------------------------------------------------
-# Copy object_streamer files.
+if(NOT WIN32)
+    target_link_libraries(face_recognition_plugin PRIVATE pthread)
+endif()
 
-file(COPY "object_streamer_files/" DESTINATION "object_streamer/" FILES_MATCHING PATTERN "*")
+# Optional: install rules
+install(TARGETS face_recognition_plugin
+    LIBRARY DESTINATION "analytics_plugins"
+    RUNTIME DESTINATION "analytics_plugins"
+)
+
+# Optional: copy models / default data
+# install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/models/
+#     DESTINATION "analytics_plugins/models"
+#     FILES_MATCHING PATTERN "*.onnx")
